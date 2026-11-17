@@ -16,6 +16,9 @@ Our clients connect peer to peer using fixed ports:
 - Brandon's server: 6769
 - David's server 6967
 
+We also need agree on a tick rate.
+We will use ***TODO*** ticks per second.
+
 At start, create a server socket then poll until both clients are connected.
 After both clients issue `COMMAND_READY`, the game starts.
 `COMMAND_READY` should contain the size of the game window.
