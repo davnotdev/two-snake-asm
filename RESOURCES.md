@@ -78,6 +78,26 @@ int main() {
 
 - https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797
 
+Getting terminal size
+
+#include <sys/ioctl.h>
+#include <stdio.h>
+#include <unistd.h>
+
+```C
+int main (int argc, char **argv)
+{
+    struct winsize w;
+    ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
+
+    printf ("lines %d\n", w.ws_row);
+    printf ("columns %d\n", w.ws_col);
+    return 0;  // make sure your main returns int
+}
+```
+
+- https://stackoverflow.com/questions/1022957/getting-terminal-width-in-c
+
 ## Raw Terminal 
 
 We need enable raw terminal mode using `ioctl`.
