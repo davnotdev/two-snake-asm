@@ -2,6 +2,11 @@
 
 Useful resources for development.
 
+## Assembly Resources
+
+- https://web.stanford.edu/class/cs107/resources/x86-64-reference.pdf
+- `%rcx` and `%r11` are not preserved after system call
+
 ## Linux System Calls
 
 - https://filippo.io/linux-syscall-table/
